@@ -1,0 +1,36 @@
+From the perimeters of ChocolateBags.calculate(small, big, total),
+we learn that
+total = total capacity of a bag
+big = 5 units per capacity
+small = 1 unit per capacity
+
+`With that, we make the following partitions`
+
+## Partition: total
+| Partition | Condition | Outcome |
+| --- | --- | --- |
+| T1 | total < 0 | Invalid input |
+| T2 | total = 0 | No bags needed |
+| T3 | 1 <= total < 5 | No big bags possible |
+| T4 | total >= 5 | Big bags possible |
+
+## Partition: big
+| Partition | Condition | Outcome |
+| --- | --- | --- |
+| B1 | big < 0 | Invalid input |
+| B2 | big = 0 | Only small bags possible |
+| B3 | big > 0 | Big bags possible |
+
+## Partition: small
+| Partition | Condition | Outcome |
+| --- | --- | --- |
+| T1 | small < 0 | Invalid input |
+| T2 | small < remainingTotal | return -1 |
+| T3 | small > remainingTotal | return remainingTotal |
+
+`Test Cases with different outcomes`
+
+## Enough small bags
+total = 3
+big = 1
+small = 8
