@@ -34,3 +34,6 @@ small = 1 unit per capacity
 total = 3
 big = 1
 small = 8
+
+// INCOMPLETE (lack of knowledge)
+
